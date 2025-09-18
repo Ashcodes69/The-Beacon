@@ -48,7 +48,7 @@ export async function connectDb() {
     mongoose.connect(MONGOOSE_URI, opts).then(() => mongoose.connection);
   }
   try {
-    // once promise resolved successfully we connect it
+    // once promise resolved successfully we connect it+
     cached.cnn = await cached.promise;
   } catch (err) {
     cached.promise = null;
